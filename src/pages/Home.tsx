@@ -34,6 +34,7 @@ import profileSecondary from '../assets/profile_secondary.png';
 
 const Home: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [filter, setFilter] = useState('all');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -294,33 +295,56 @@ const Home: React.FC = () => {
 
       {/* Projects Section */}
       <Section id="projects" title="Featured Projects" subtitle="A selection of my best work in engineering and research">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {['all', 'tech', 'blockchain', 'game', 'fullstack', 'tourism'].map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] transition-all duration-500 border ${
+                filter === cat 
+                  ? 'bg-white text-black border-white shadow-xl' 
+                  : 'bg-transparent text-gray-500 border-white/10 hover:border-white/30 hover:text-white'
+              }`}
             >
-              <Card className="group overflow-hidden p-0 flex flex-col h-full">
-                <div className="relative h-64 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 z-10 group-hover:opacity-0 transition-opacity" />
-                  <img 
-                    src={project.thumbnail || `https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80`}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
-                    {project.category.map((cat, ci) => (
-                      <span key={ci} className="px-3 py-1 glass text-[10px] font-black uppercase tracking-widest text-white rounded-full">
-                        {cat}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors">{project.title}</h3>
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          <AnimatePresence mode="popLayout">
+            {projects
+              .filter(p => filter === 'all' || p.category.includes(filter as any))
+              .map((project) => (
+                <motion.div
+                  layout
+                  key={project.slug}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <Card className="group overflow-hidden p-0 flex flex-col h-full border-white/5 hover:border-purple-500/30 transition-all duration-500">
+                    <div className="relative h-72 overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 z-10 group-hover:opacity-0 transition-opacity" />
+                      <img 
+                        src={project.thumbnail || `https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80`}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
+                        {project.category.map((cat, ci) => (
+                          <span key={ci} className="px-3 py-1 glass text-[10px] font-black uppercase tracking-widest text-white rounded-full">
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="p-8 flex flex-col flex-grow">
+                      <h3 className="text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors">{project.title}</h3>
                   <p className="text-gray-400 mb-6 flex-grow">{project.summary}</p>
                   <div className="flex flex-wrap gap-2 mb-8">
                     {project.techStack.map((tech, ti) => (
@@ -336,12 +360,12 @@ const Home: React.FC = () => {
                     {project.githubUrl && (
                       <Button href={project.githubUrl} variant="secondary" className="py-2 px-6 text-sm">GitHub</Button>
                     )}
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+          </AnimatePresence>
+        </motion.div>
       </Section>
 
       {/* Experience Section */}
