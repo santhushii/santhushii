@@ -79,22 +79,22 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
-              className="relative"
+              className="relative flex justify-center lg:justify-end"
             >
-              <div className="relative z-10 aspect-square rounded-3xl overflow-hidden glass p-4 border-white/10 group">
+              <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden glass p-3 border-white/10 group">
                 <img 
                   src="/santhushie.png" 
                   alt={profile.name}
-                  className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover rounded-2xl transition-all duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  <p className="text-white font-bold text-xl mb-2">Santhushie Nallaperuma</p>
-                  <p className="text-purple-400 text-sm">Software Engineer | Blockchain Specialist</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                  <p className="text-white font-bold text-xl mb-1">Santhushie Nallaperuma</p>
+                  <p className="text-purple-400 text-sm font-bold">Software Engineer</p>
                 </div>
               </div>
               {/* Decorative Elements */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-600/30 blur-3xl rounded-full -z-10 animate-pulse-slow" />
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-600/30 blur-3xl rounded-full -z-10 animate-pulse-slow" />
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-600/20 blur-3xl rounded-full -z-10 animate-pulse-slow" />
+              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-600/20 blur-3xl rounded-full -z-10 animate-pulse-slow" />
             </motion.div>
           </div>
         </div>
