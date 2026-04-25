@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// Final build trigger - ensuring all asset paths are resolved
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './contexts/ThemeContext';
