@@ -214,7 +214,7 @@ const Home: React.FC = () => {
             <p className="text-gray-400 text-lg mb-8 leading-relaxed font-medium">
               {profile.story}
             </p>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-6 mb-12">
               {profile.values.map((value, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-purple-500 rounded-full" />
@@ -222,34 +222,29 @@ const Home: React.FC = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
-          >
-            <Card className="aspect-square flex flex-col justify-center items-center text-center p-8">
-              <HiCode className="w-12 h-12 text-purple-500 mb-4" />
-              <div className="text-3xl font-black mb-2">15+</div>
-              <div className="text-sm text-gray-400 uppercase font-bold">Projects Done</div>
-            </Card>
-            <Card className="aspect-square flex flex-col justify-center items-center text-center p-8 mt-8">
-              <HiBriefcase className="w-12 h-12 text-blue-500 mb-4" />
-              <div className="text-3xl font-black mb-2">4+</div>
-              <div className="text-sm text-gray-400 uppercase font-bold">Years Experience</div>
-            </Card>
-            <Card className="aspect-square flex flex-col justify-center items-center text-center p-8 -mt-8">
-              <HiAcademicCap className="w-12 h-12 text-pink-500 mb-4" />
-              <div className="text-3xl font-black mb-2">10+</div>
-              <div className="text-sm text-gray-400 uppercase font-bold">Tech Mastered</div>
-            </Card>
-            <Card className="aspect-square flex flex-col justify-center items-center text-center p-8">
-              <HiGlobeAlt className="w-12 h-12 text-cyan-500 mb-4" />
-              <div className="text-3xl font-black mb-2">100%</div>
-              <div className="text-sm text-gray-400 uppercase font-bold">Passion</div>
-            </Card>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <Card className="flex flex-col justify-center items-center text-center p-6 bg-white/5 border-white/10 hover:border-purple-500/50 transition-colors">
+                <HiCode className="w-8 h-8 text-purple-500 mb-3" />
+                <div className="text-2xl font-black mb-1">15+</div>
+                <div className="text-[10px] text-gray-500 uppercase font-black tracking-widest">Projects</div>
+              </Card>
+              <Card className="flex flex-col justify-center items-center text-center p-6 bg-white/5 border-white/10 hover:border-blue-500/50 transition-colors">
+                <HiBriefcase className="w-8 h-8 text-blue-500 mb-3" />
+                <div className="text-2xl font-black mb-1">4+</div>
+                <div className="text-[10px] text-gray-500 uppercase font-black tracking-widest">Experience</div>
+              </Card>
+              <Card className="flex flex-col justify-center items-center text-center p-6 bg-white/5 border-white/10 hover:border-pink-500/50 transition-colors">
+                <HiAcademicCap className="w-8 h-8 text-pink-500 mb-3" />
+                <div className="text-2xl font-black mb-1">10+</div>
+                <div className="text-[10px] text-gray-500 uppercase font-black tracking-widest">Tech</div>
+              </Card>
+              <Card className="flex flex-col justify-center items-center text-center p-6 bg-white/5 border-white/10 hover:border-cyan-500/50 transition-colors">
+                <HiGlobeAlt className="w-8 h-8 text-cyan-500 mb-3" />
+                <div className="text-2xl font-black mb-1">100%</div>
+                <div className="text-[10px] text-gray-500 uppercase font-black tracking-widest">Passion</div>
+              </Card>
+            </div>
           </motion.div>
         </div>
       </Section>
