@@ -189,7 +189,7 @@ const Home: React.FC = () => {
           >
             <div className="relative aspect-[3/4] rounded-[30px] overflow-hidden glass border-white/10 shadow-2xl">
               <img 
-                src="/profile_secondary.png" 
+                src="/2.png" 
                 alt="Santhushie Secondary" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
