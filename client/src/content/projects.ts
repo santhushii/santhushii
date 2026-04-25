@@ -89,6 +89,32 @@ export const projects: Project[] = [
     liveUrl: 'https://oluspa.com'
   },
   {
+    title: 'Sensei Japanese Center',
+    slug: 'sensei-japanese',
+    summary: 'Mobile-first language portal for 100+ active students',
+    description: 'Designed a mobile-first language portal using responsive CSS architectures, serving over 100+ active students monthly. Integrated lightweight course management modules to ensure sub-second page performance.',
+    thumbnail: '/sensei_japanese.png',
+    category: ['tech', 'learning'],
+    tags: ['Responsive', 'Performance', 'CSS'],
+    techStack: ['HTML5', 'CSS3', 'JavaScript'],
+    tools: ['Chrome DevTools', 'Lighthouse'],
+    featured: true,
+    liveUrl: 'https://senseijapanese.lk'
+  },
+  {
+    title: 'Hospital Management System',
+    slug: 'hospital-management',
+    summary: 'Full-stack CRUD application for patient data management',
+    description: 'Full-stack CRUD application for managing patient data, featuring JWT-based authentication and secure account levels. Built with the MERN stack for scalability and security.',
+    thumbnail: '/hospital_mgmt.png',
+    category: ['fullstack'],
+    tags: ['MERN', 'Security', 'CRUD'],
+    techStack: ['MongoDB', 'Express', 'React', 'Node.js', 'JWT'],
+    tools: ['Postman', 'Atlas'],
+    featured: true,
+    githubUrl: 'https://github.com/santhushii/hospital-management'
+  },
+  {
     title: 'Halloween Battleground',
     slug: 'halloween-battleground',
     summary: 'Multiplayer indie game developed with Godot',
@@ -98,6 +124,18 @@ export const projects: Project[] = [
     tags: ['Game Dev', 'Godot', 'Multiplayer'],
     techStack: ['Godot Engine', 'GDScript'],
     tools: ['Blender', 'Aseprite'],
+    featured: true
+  },
+  {
+    title: 'Medical Center Management',
+    slug: 'medical-center-mgmt',
+    summary: 'Full-stack admin dashboard for healthcare providers',
+    description: 'Developed a comprehensive admin dashboard for managing patient records, appointments, and billing. Built with the MERN stack to ensure high availability and data security.',
+    thumbnail: '/medical_mgmt.png',
+    category: ['fullstack'],
+    tags: ['MERN', 'Healthcare', 'Admin Dashboard'],
+    techStack: ['MongoDB', 'Express', 'React', 'Node.js'],
+    tools: ['Postman', 'Atlas'],
     featured: true
   },
   {
@@ -112,18 +150,6 @@ export const projects: Project[] = [
     tools: ['GIMP'],
     featured: false,
     githubUrl: 'https://github.com/santhushii/starship_game_014.git'
-  },
-  {
-    title: 'Medical Center Management',
-    slug: 'medical-center-mgmt',
-    summary: 'Full-stack admin dashboard for healthcare providers',
-    description: 'Developed a comprehensive admin dashboard for managing patient records, appointments, and billing. Built with the MERN stack to ensure high availability and data security.',
-    thumbnail: '/medical_mgmt.png',
-    category: ['fullstack'],
-    tags: ['MERN', 'Healthcare', 'Admin Dashboard'],
-    techStack: ['MongoDB', 'Express', 'React', 'Node.js'],
-    tools: ['Postman', 'Atlas'],
-    featured: true
   },
   {
     title: 'Online Music Store',
@@ -162,5 +188,17 @@ export const projects: Project[] = [
     tools: ['Google Search Console'],
     featured: false,
     githubUrl: 'https://github.com/santhushii/flying_bird_tours.git'
+  },
+  {
+    title: 'Student Management System',
+    slug: 'student-mgmt',
+    summary: 'Lightweight PHP/MySQL system for educational records',
+    description: 'Built database connectivity and backend logic for managing student records, featuring secure login and CRUD functionality.',
+    thumbnail: '/student_mgmt.png',
+    category: ['tech'],
+    tags: ['PHP', 'MySQL', 'Education'],
+    techStack: ['PHP', 'MySQL', 'HTML', 'CSS'],
+    tools: ['XAMPP'],
+    featured: false
   }
 ];
