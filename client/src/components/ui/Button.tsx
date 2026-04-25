@@ -23,27 +23,30 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   disabled = false
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center px-6 py-3 font-bold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed pixel-text cursor-pointer';
+  const baseClasses = 'inline-flex items-center justify-center transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer';
   
   const variantClasses = {
-    primary: 'btn-primary',
-    secondary: 'btn-secondary',
-    outline: 'btn-outline'
+    primary: 'btn-premium text-white',
+    secondary: 'btn-outline-premium text-white',
+    outline: 'border-2 border-white/20 hover:border-white/50 text-white rounded-full px-8 py-4'
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
+  
+  const content = (
+    <motion.div
+      whileHover={{ scale: disabled ? 1 : 1.05 }}
+      whileTap={{ scale: disabled ? 1 : 0.95 }}
+      className={classes}
+    >
+      {children}
+    </motion.div>
+  );
 
-  // If it's a link (to or href), render as link
   if (to) {
     return (
       <Link to={to} className="inline-block">
-        <motion.span
-          whileHover={{ scale: disabled ? 1 : 1.02 }}
-          whileTap={{ scale: disabled ? 1 : 0.98 }}
-          className={classes}
-        >
-          {children}
-        </motion.span>
+        {content}
       </Link>
     );
   }
@@ -51,29 +54,20 @@ const Button: React.FC<ButtonProps> = ({
   if (href) {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" className="inline-block">
-        <motion.span
-          whileHover={{ scale: disabled ? 1 : 1.02 }}
-          whileTap={{ scale: disabled ? 1 : 0.98 }}
-          className={classes}
-        >
-          {children}
-        </motion.span>
+        {content}
       </a>
     );
   }
 
-  // Otherwise, render as button
   return (
-    <motion.button
+    <button
       type={type}
-      whileHover={{ scale: disabled ? 1 : 1.02 }}
-      whileTap={{ scale: disabled ? 1 : 0.98 }}
-      className={classes}
+      className="bg-transparent border-none p-0 cursor-pointer"
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
-    </motion.button>
+      {content}
+    </button>
   );
 };
 

@@ -1,61 +1,57 @@
 export const profile = {
   name: 'Santhushie Nallaperuma',
   roles: [
-    'IT Graduate',
-    'Associate Project Manager',
-    'Tech & Digital Marketing Enthusiast'
+    'React Developer',
+    'MERN Stack Engineer',
+    'Web3 Specialist',
+    'UI/UX Designer',
+    'Problem Solver'
   ],
-  location: 'Sri Lanka',
-  tagline: 'Bridging Technology & Marketing to Create Impactful Digital Experiences',
-  bio: 'Passionate IT undergraduate and Associate Project Manager who combines technical expertise with digital marketing prowess to deliver innovative solutions and drive growth.',
-  email: 'contact@santhushie.com',
+  location: 'Matara, Sri Lanka',
+  tagline: 'Software Engineer | React & Blockchain Specialist',
+  bio: 'Results-driven "Learnaholic" engineer specializing in React, TypeScript, and Web3. I leverage a unique mix of game logic, blockchain security, and educational research to build digital products that matter.',
+  email: 'santhushie@gmail.com',
   linkedin: 'https://linkedin.com/in/santhushie',
-  github: 'https://github.com/santhushie',
-  twitter: 'https://twitter.com/santhushie',
-  website: 'https://santhushie.com',
-  avatar: '/avatar.jpg',
+  github: 'https://github.com/santhushii',
+  twitter: '',
+  website: 'https://github.com/santhushii',
+  avatar: '/santhushie.png',
+  cv: '/Santhushie_Nallaperuma.pdf',
   stats: {
-    yearsExperience: 3,
-    projectsCount: 25,
+    yearsExperience: 4,
+    projectsCount: 15,
     keyTools: [
-      'React', 'Node.js', 'MongoDB', 'Express',
-      'Figma', 'Google Analytics', 'Meta Ads', 'Jira'
+      'React', 'TypeScript', 'Node.js', 'MongoDB',
+      'Solidity', 'Hardhat', 'Ethers.js', 'Rust'
     ]
   },
   values: [
-    'Data-Driven Decision Making',
-    'User-Centric Approach',
-    'Creative Problem Solving',
-    'Reliable & Professional'
+    'User-Centric Web3 Experiences',
+    'Gamified Learning Architectures',
+    'Accessible & Scalable Code',
+    'Continuous Daily Mastery'
   ],
   techSide: {
-    title: 'The Tech Side',
-    description: 'Building scalable web applications and digital products',
+    title: 'Core Engineering',
+    description: 'Building robust frontend and blockchain solutions',
     highlights: [
-      'Full-stack development with MERN stack',
-      'API design and integration',
-      'Database architecture and optimization',
-      'Version control and CI/CD pipelines',
-      'Agile project management'
+      'Smart contract development & security',
+      'High-performance DeFi app architectures',
+      'Advanced React patterns & State management',
+      'Mobile-first responsive CSS architectures',
+      'Cross-browser accessibility (WCAG 2.1 AAA)'
     ]
   },
   marketingSide: {
-    title: 'The Marketing Side',
-    description: 'Driving growth through strategic digital campaigns',
+    title: 'Strategic Growth',
+    description: 'Data-driven engagement and brand positioning',
     highlights: [
-      'SEO/SEM strategy and optimization',
-      'Social media campaign management',
-      'Content creation and marketing',
-      'Analytics and performance tracking',
-      'Brand storytelling and positioning'
+      'Data-driven content funnel architecture',
+      'SEO & Google Analytics integration',
+      'Technical content strategy',
+      'User engagement optimization',
+      'Integrated Marketing Communications'
     ]
   },
-  story: `I discovered my passion for both technology and marketing during my IT degree. 
-  While learning to code and build applications, I realized that creating great products is only half the battle—getting them in front of the right people is equally important.
-  
-  As an Associate Project Manager at YakkunLabs, I've had the opportunity to work at the intersection of tech and business strategy, managing projects that require both technical expertise and marketing insights.
-  
-  My unique combination of skills allows me to understand not just how to build products, but also how to market them effectively, analyze their performance, and iterate based on real user data.
-  
-  I believe in creating solutions that are not only technically sound but also strategically positioned for success in the digital marketplace.`
+  story: `I am a Software Engineer who thrives at the intersection of complex logic and intuitive design. Currently mastering Japanese (N4) while building scalable web applications that bridge technical gaps for users worldwide. My background in IT and Digital Marketing gives me a unique perspective on building products that aren't just technically sound, but also highly engaging and user-focused.`
 };
