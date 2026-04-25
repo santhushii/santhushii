@@ -97,34 +97,51 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden absolute top-full left-0 right-0 glass border-t border-white/10 overflow-hidden"
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="lg:hidden fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl p-8 flex flex-col justify-center items-center text-center"
           >
-            <div className="container-max px-4 py-8 flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <a
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-6 right-6 p-2 text-white/50 hover:text-white transition-colors"
+            >
+              <HiX className="w-10 h-10" />
+            </button>
+            
+            <div className="flex flex-col space-y-6">
+              {navLinks.map((link, i) => (
+                <motion.a
                   key={link.path}
                   href={link.path}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection(link.path);
                   }}
-                  className="text-2xl font-bold text-gray-400 hover:text-white transition-colors"
+                  className="text-4xl font-black tracking-tighter text-gray-400 hover:text-white hover:scale-110 transition-all"
                 >
                   {link.label}
-                </a>
+                </motion.a>
               ))}
-              <div className="pt-4 mt-4 border-t border-white/10">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: navLinks.length * 0.05 }}
+                className="pt-8"
+              >
                  <a 
                   href="/Santhushie_Nallaperuma.pdf" 
                   download
-                  className="btn-premium w-full text-center"
+                  onClick={() => setIsOpen(false)}
+                  className="btn-premium py-4 px-10 text-xl inline-block"
                 >
                   Download CV
                 </a>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         )}
