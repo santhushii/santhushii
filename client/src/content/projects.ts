@@ -5,7 +5,7 @@ export interface Project {
   description: string;
   thumbnail?: string;
   images?: string[];
-  category: ('tech' | 'blockchain' | 'learning' | 'fullstack' | 'game' | 'marketing' | 'tourism')[];
+  category: ('tech' | 'blockchain' | 'learning' | 'fullstack' | 'game' | 'marketing' | 'tourism' | 'rust')[];
   tags: string[];
   techStack: string[];
   tools: string[];
@@ -37,6 +37,19 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/santhushii/jlpt-master'
   },
   {
+    title: 'Sonic Blockchain NFT',
+    slug: 'sonic-blockchain',
+    summary: 'Web3 NFT project on the Sonic blockchain',
+    description: 'Developed a high-performance NFT minting platform on the Sonic blockchain. Implemented secure smart contracts and a seamless frontend handshake protocol for Web3 wallets.',
+    thumbnail: '/sonic_thumb.png',
+    category: ['blockchain', 'tech'],
+    tags: ['Web3', 'Solidity', 'Sonic'],
+    techStack: ['Solidity', 'React', 'Ethers.js', 'Hardhat'],
+    tools: ['MetaMask', 'Sonic Scan'],
+    featured: true,
+    githubUrl: 'https://github.com/santhushii/sonic-blockchain-nft.git'
+  },
+  {
     title: 'HENNGE Password Validation',
     slug: 'hennge-challenge',
     summary: 'Enterprise-grade authentication portal with strict accessibility',
@@ -48,6 +61,19 @@ export const projects: Project[] = [
     tools: ['WCAG 2.1 AAA'],
     featured: true,
     githubUrl: 'https://github.com/santhushii/hennge-challenge'
+  },
+  {
+    title: 'Bevy 2D Indie Game',
+    slug: 'bevy-game',
+    summary: 'High-performance 2D game built with Rust and Bevy',
+    description: 'Engineered a 2D game using the Bevy engine and Rust, leveraging ECS (Entity Component System) architecture for high performance and modularity. Focused on smooth gameplay physics and memory-efficient asset loading.',
+    thumbnail: '/bevy_thumb.png',
+    category: ['game', 'rust'],
+    tags: ['Rust', 'Bevy', 'Game Dev'],
+    techStack: ['Rust', 'Bevy Engine'],
+    tools: ['Cargo', 'VS Code'],
+    featured: true,
+    githubUrl: 'https://github.com/santhushii/bevy_new_2d.git'
   },
   {
     title: 'Oluspa Website',
@@ -73,6 +99,19 @@ export const projects: Project[] = [
     techStack: ['Godot Engine', 'GDScript'],
     tools: ['Blender', 'Aseprite'],
     featured: true
+  },
+  {
+    title: 'Starship Game 014',
+    slug: 'starship-game',
+    summary: 'Space-themed action game with dynamic combat',
+    description: 'Built an action-packed space exploration game featuring dynamic combat systems and procedural environment elements.',
+    thumbnail: '/starship_thumb.png',
+    category: ['game'],
+    tags: ['Game Dev', 'Physics', 'Action'],
+    techStack: ['Godot', 'GDScript'],
+    tools: ['GIMP'],
+    featured: false,
+    githubUrl: 'https://github.com/santhushii/starship_game_014.git'
   },
   {
     title: 'Medical Center Management',
@@ -108,7 +147,8 @@ export const projects: Project[] = [
     tags: ['Tourism', 'Web Design', 'UI/UX'],
     techStack: ['HTML5', 'CSS3', 'JavaScript'],
     tools: ['Figma'],
-    featured: false
+    featured: false,
+    githubUrl: 'https://github.com/santhushii/travel_with_sohan.git'
   },
   {
     title: 'Flying Bird Tours',
@@ -120,18 +160,7 @@ export const projects: Project[] = [
     tags: ['Tourism', 'Responsive', 'Conversion'],
     techStack: ['HTML5', 'CSS3', 'JavaScript'],
     tools: ['Google Search Console'],
-    featured: false
-  },
-  {
-    title: 'Student Management System',
-    slug: 'student-mgmt',
-    summary: 'Lightweight PHP/MySQL system for educational records',
-    description: 'Built database connectivity and backend logic for managing student records, featuring secure login and CRUD functionality.',
-    thumbnail: '/student_mgmt.png',
-    category: ['tech'],
-    tags: ['PHP', 'MySQL', 'Education'],
-    techStack: ['PHP', 'MySQL', 'HTML', 'CSS'],
-    tools: ['XAMPP'],
-    featured: false
+    featured: false,
+    githubUrl: 'https://github.com/santhushii/flying_bird_tours.git'
   }
 ];
