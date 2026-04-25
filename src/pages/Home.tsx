@@ -30,7 +30,6 @@ import { experiences } from '../content/experience';
 import { skillCategories } from '../content/skills';
 import { education } from '../content/education';
 import { research } from '../content/research';
-import profileSecondary from '../assets/profile_secondary.png';
 
 const Home: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -190,7 +189,7 @@ const Home: React.FC = () => {
           >
             <div className="relative aspect-[3/4] rounded-[30px] overflow-hidden glass border-white/10 shadow-2xl">
               <img 
-                src={profileSecondary} 
+                src="/profile_secondary.png" 
                 alt="Santhushie Secondary" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
