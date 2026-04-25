@@ -8,10 +8,10 @@ import Button from '../components/ui/Button';
 import TypingEffect from '../components/ui/TypingEffect';
 import { profile } from '../content/profile';
 import { projects } from '../content/projects';
-import { experience } from '../content/experience';
-import { education } from '../content/education';
+import { experience } from '../content/experienceData';
+import { education } from '../content/educationData';
 import { skills } from '../content/skillData';
-import { research } from '../content/research';
+import { research } from '../content/researchData';
 
 const Home: React.FC = () => {
   const [filter, setFilter] = useState('all');
