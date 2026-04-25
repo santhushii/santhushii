@@ -1,40 +1,32 @@
 export interface Experience {
-  id: number;
-  role: string;
   company: string;
+  role: string;
   location: string;
   period: string;
-  description: string[];
-  skills: string[];
-  type: 'professional' | 'internship' | 'freelance';
+  highlights: string[];
 }
 
-export const experiences: Experience[] = [
+export const experience: Experience[] = [
   {
-    id: 1,
-    role: 'Web3 Engineer',
     company: 'YakkunLabs',
+    role: 'Web3 Engineer',
     location: 'Matara, SL',
     period: 'Jan 2025 – Present',
-    description: [
+    highlights: [
       'Implemented secure smart contract lifecycles and frontend handshake protocols using Solidity, Hardhat, and Ethers.js.',
       'Successfully optimized Web3 wallet integrations (MetaMask/WalletConnect) to reduce user onboarding friction by 40%.',
       'Collaborated with backend engineers to architect decentralized data indexing solutions for high-performance DeFi apps.'
-    ],
-    skills: ['Solidity', 'Hardhat', 'Ethers.js', 'React', 'Web3.js'],
-    type: 'professional'
+    ]
   },
   {
-    id: 2,
-    role: 'Assistant Social Media Marketing',
     company: 'Park Street Warehouse',
+    role: 'Assistant Social Media Marketing',
     location: 'Colombo, SL',
     period: 'Nov 2023 – Oct 2024',
-    description: [
+    highlights: [
       'Architected data-driven content funnels that boosted user engagement and social conversion rates for major events.',
-      'Utilized Google Analytics and SEO tools to identify high-traffic keywords for technical content strategies.'
-    ],
-    skills: ['Google Analytics', 'SEO', 'Content Strategy', 'Marketing Funnels'],
-    type: 'professional'
+      'Utilized Google Analytics and SEO tools to identify high-traffic keywords for technical content strategies.',
+      'Optimized digital product presentations resulting in a measurable increase in conversion rates.'
+    ]
   }
 ];
