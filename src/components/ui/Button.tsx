@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'glass';
+  size?: 'sm' | 'md' | 'lg';
   to?: string;
   href?: string;
   onClick?: () => void;
@@ -16,6 +17,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
+  size = 'md',
   to,
   href,
   onClick,
@@ -23,15 +25,23 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   disabled = false
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer';
+  const baseClasses = 'inline-flex items-center justify-center font-bold transition-all duration-500 rounded-full disabled:opacity-50 disabled:cursor-not-allowed';
   
-  const variantClasses = {
-    primary: 'btn-premium text-white',
-    secondary: 'btn-outline-premium text-white',
-    outline: 'border-2 border-white/20 hover:border-white/50 text-white rounded-full px-8 py-4'
+  const sizeClasses = {
+    sm: 'px-4 py-2 text-xs',
+    md: 'px-8 py-4 text-sm',
+    lg: 'px-12 py-5 text-lg uppercase tracking-widest'
   };
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
+  const variantClasses = {
+    primary: 'btn-premium text-white shadow-2xl shadow-purple-500/20 hover:shadow-purple-500/40',
+    secondary: 'btn-outline-premium text-white',
+    outline: 'border-2 border-white/10 hover:border-white/40 text-white bg-white/5 backdrop-blur-md',
+    ghost: 'text-gray-400 hover:text-white hover:bg-white/5',
+    glass: 'bg-white/5 backdrop-blur-xl border border-white/10 text-white hover:bg-white/10 shadow-lg'
+  };
+
+  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
   
   const content = (
     <motion.div
