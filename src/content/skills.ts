@@ -1,53 +1,31 @@
-export interface SkillCategory {
-  title: string;
-  skills: {
-    name: string;
-    level: number; // 1-100
-    icon?: string;
-  }[];
+export interface SkillGroup {
+  category: string;
+  items: string[];
 }
 
-export const skillCategories: SkillCategory[] = [
+export const skills: SkillGroup[] = [
   {
-    title: 'Core Languages',
-    skills: [
-      { name: 'JavaScript (ES6+)', level: 95 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'Rust', level: 75 },
-      { name: 'Solidity', level: 85 },
-      { name: 'Java', level: 80 },
-      { name: 'Python', level: 70 },
-      { name: 'PHP', level: 65 },
-      { name: 'MySQL', level: 80 }
-    ]
+    category: 'Core Languages',
+    items: ['JavaScript (ES6+)', 'TypeScript', 'Rust', 'Solidity', 'Java', 'Python', 'PHP', 'MySQL', 'C++']
   },
   {
-    title: 'Frontend & Logic',
-    skills: [
-      { name: 'React', level: 95 },
-      { name: 'Redux', level: 85 },
-      { name: 'HTML5', level: 98 },
-      { name: 'CSS3/Flexbox/Grid', level: 95 },
-      { name: 'Godot Scripting', level: 70 }
-    ]
+    category: 'Frontend & Logic',
+    items: ['React', 'Next.js', 'Framer Motion', 'Tailwind CSS', 'Redux', 'HTML5/CSS3', 'Godot Scripting']
   },
   {
-    title: 'Backend & Web3',
-    skills: [
-      { name: 'Node.js', level: 90 },
-      { name: 'Express', level: 85 },
-      { name: 'MongoDB Atlas', level: 80 },
-      { name: 'Hardhat', level: 85 },
-      { name: 'Web3.js/Ethers.js', level: 90 }
-    ]
+    category: 'Backend & Web3',
+    items: ['Node.js', 'Express', 'MongoDB', 'Hardhat', 'Web3.js', 'Ethers.js', 'Smart Contracts']
   },
   {
-    title: 'Tools & Others',
-    skills: [
-      { name: 'Git Ecosystem', level: 90 },
-      { name: 'Google Analytics', level: 85 },
-      { name: 'SEO Tools', level: 80 },
-      { name: 'UI/UX Design', level: 85 }
-    ]
+    category: 'Tools & Design',
+    items: ['Git/GitHub', 'Google Analytics', 'SEO Mastery', 'UI/UX Design', 'Figma', 'Postman']
+  },
+  {
+    category: 'Japanese (N4)',
+    items: ['JLPT N4 Proficiency', 'Kanji Mastery', 'Keigo', 'Cultural Integration']
+  },
+  {
+    category: 'Interests',
+    items: ['Chess (National)', 'Badminton', 'Netball', 'Philanthropy']
   }
 ];
