@@ -10,7 +10,7 @@ import { profile } from '../content/profile';
 import { projects } from '../content/projects';
 import { experience } from '../content/experience';
 import { education } from '../content/education';
-import { skills } from '../content/skills';
+import { skills } from '../content/skillData';
 import { research } from '../content/research';
 
 const Home: React.FC = () => {
