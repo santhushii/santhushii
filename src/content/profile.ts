@@ -13,6 +13,8 @@ export const profile = {
   email: 'santhushie@gmail.com',
   linkedin: 'https://linkedin.com/in/santhushie',
   github: 'https://github.com/santhushii',
+  fiverr: 'https://www.fiverr.com/santhushie/',
+  phone: '+94 76 200 4123',
   twitter: '',
   website: 'https://github.com/santhushii',
   avatar: '/santhushie.png',

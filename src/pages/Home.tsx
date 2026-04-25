@@ -15,7 +15,8 @@ import {
 import { 
   SiLinkedin, 
   SiGithub, 
-  SiWhatsapp 
+  SiWhatsapp,
+  SiFiverr
 } from 'react-icons/si';
 
 import Button from '../components/ui/Button';
@@ -110,6 +111,9 @@ const Home: React.FC = () => {
                 <a href="https://wa.me/94762004123" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-colors">
                   <SiWhatsapp size={28} />
                 </a>
+                <a href={profile.fiverr} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                  <SiFiverr size={36} />
+                </a>
               </div>
             </motion.div>
 
@@ -175,11 +179,33 @@ const Home: React.FC = () => {
 
       {/* About Section */}
       <Section id="about" title="About Me" subtitle="My journey and passion for building technology">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-4 relative group"
+          >
+            <div className="relative aspect-[3/4] rounded-[30px] overflow-hidden glass border-white/10 shadow-2xl">
+              <img 
+                src="/profile_secondary.png" 
+                alt="Santhushie Secondary" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            </div>
+            {/* Experience Badge */}
+            <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border-purple-500/30 shadow-xl">
+              <div className="text-4xl font-black text-purple-400">4+</div>
+              <div className="text-[10px] font-black uppercase tracking-widest text-gray-400">Years Exp.</div>
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="lg:col-span-8"
           >
             <h3 className="text-3xl font-bold mb-6 text-white leading-tight">
               A dedicated Software Engineer with a passion for <span className="text-purple-400">Innovation</span> and <span className="text-blue-400">Scalability</span>.
@@ -515,6 +541,7 @@ const Home: React.FC = () => {
               <div className="flex gap-4">
                 <a href={profile.github} target="_blank" rel="noopener noreferrer" className="w-12 h-12 glass rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors"><SiGithub size={24} /></a>
                 <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 glass rounded-xl flex items-center justify-center hover:bg-blue-500/20 transition-colors text-blue-400"><SiLinkedin size={24} /></a>
+                <a href={profile.fiverr} target="_blank" rel="noopener noreferrer" className="w-12 h-12 glass rounded-xl flex items-center justify-center hover:bg-green-500/20 transition-colors text-green-400"><SiFiverr size={32} /></a>
               </div>
             </div>
           </motion.div>
