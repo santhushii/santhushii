@@ -50,22 +50,22 @@ const Home: React.FC = () => {
               >
                 Available for New Projects
               </motion.div>
-              <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none">
+              <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-10 leading-none">
                 HI, I'M <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500">
                   SANTHUSHIE
                 </span>
               </h1>
-              <div className="h-12 mb-8">
+              <div className="h-12 mb-12">
                 <TypingEffect 
                   words={profile.roles}
                   className="text-2xl md:text-3xl font-bold text-gray-400"
                 />
               </div>
-              <p className="text-xl text-gray-400 mb-10 max-w-lg leading-relaxed font-medium">
+              <p className="text-xl text-gray-400 mb-14 max-w-lg leading-relaxed font-medium">
                 {profile.bio}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-6">
                 <Button onClick={() => scrollToSection('projects')} variant="primary" size="lg">
                   View My Work <HiArrowRight className="ml-2" />
                 </Button>

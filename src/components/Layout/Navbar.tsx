@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center glass p-1.5 rounded-full border border-white/10 shadow-2xl">
+          <div className="hidden lg:flex items-center glass p-2 rounded-full border border-white/10 shadow-2xl gap-1">
             {navLinks.map((link) => {
               const isActive = activeSection === link.path.replace('#', '');
               return (
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
                     e.preventDefault();
                     scrollToSection(link.path);
                   }}
-                  className={`relative px-6 py-2.5 text-xs font-bold uppercase tracking-widest transition-all duration-500 rounded-full ${
+                  className={`relative px-8 py-3 text-[11px] font-black uppercase tracking-widest transition-all duration-500 rounded-full ${
                     isActive ? 'text-white' : 'text-gray-400 hover:text-white'
                   }`}
                 >
