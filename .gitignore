@@ -1,7 +1,6 @@
 # Dependencies
 node_modules/
-client/node_modules/
-server/node_modules/
+dist/
 
 # Environment variables
 .env
@@ -9,13 +8,6 @@ server/node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
-client/.env
-server/.env
-
-# Build outputs
-client/dist/
-client/build/
-server/dist/
 
 # Logs
 *.log
@@ -35,7 +27,3 @@ pnpm-debug.log*
 # Testing
 coverage/
 .nyc_output/
-
-# Production
-/client/dist
-/server/dist
