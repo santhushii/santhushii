@@ -14,7 +14,7 @@ I am a **Software Engineer** and **Published Researcher** (ICITR 2025) with a de
 - 🎓 **Education:** B.Sc (Hons) in Information Technology, **SLIIT** .
 - 📜 **Research:** Author of "Grade 06 Coding Education..." at **10th ICITR 2025**.
 - 🏅 **Athlete:** National-level Athlete | Represented SLIIT in Chess, Badminton, and Netball.
-- 🇯🇵 **Language:** Japanese Proficiency **JLPT N4 Level**.
+
 
 ---
 
