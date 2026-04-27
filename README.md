@@ -1,4 +1,5 @@
-# ⚡ Santhushiii | Full-Stack Web3 Engineer & Researcher
+# ⚡ Santhushiii | Full-Stack Web3 Engineer 
+
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=28&pause=1000&color=00F2FF&center=true&vCenter=true&width=600&lines=WEB3+ENGINEER;PUBLISHED+RESEARCHER;RUST+GAME+DEV;MERN+SPECIALIST" alt="Typing Animation" />
