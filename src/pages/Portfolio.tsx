@@ -33,9 +33,16 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="aurora">
+        <div className="aurora-item aurora-1"></div>
+        <div className="aurora-item aurora-2"></div>
+        <div className="aurora-item aurora-3"></div>
+      </div>
+
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center relative pt-20">
+      <section id="home" className="min-h-screen flex items-center relative pt-32 pb-20">
         <div className="container-max px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -44,25 +51,29 @@ const Home: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="inline-block px-4 py-2 glass rounded-full text-purple-400 font-bold text-xs uppercase tracking-widest mb-6"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="inline-flex items-center gap-3 px-6 py-2.5 glass rounded-full border border-purple-500/30 text-purple-400 font-black text-[10px] uppercase tracking-[0.25em] mb-10 shadow-lg shadow-purple-500/10"
               >
-                Available for New Projects
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                </span>
+                Open to New Opportunities
               </motion.div>
-              <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-10 leading-none">
+              <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter mb-8 leading-[0.85]">
                 HI, I'M <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 drop-shadow-sm">
                   SANTHUSHIE
                 </span>
               </h1>
-              <div className="h-12 mb-12">
+              <div className="h-10 mb-8">
                 <TypingEffect 
-                  words={profile.roles}
-                  className="text-2xl md:text-3xl font-bold text-gray-400"
+                  texts={profile.roles}
+                  className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400/80"
                 />
               </div>
-              <p className="text-xl text-gray-400 mb-14 max-w-lg leading-relaxed font-medium">
+              <p className="text-lg text-gray-400 mb-10 max-w-lg leading-relaxed font-medium">
                 {profile.bio}
               </p>
               <div className="flex flex-wrap gap-6">
@@ -81,20 +92,20 @@ const Home: React.FC = () => {
               transition={{ duration: 1 }}
               className="relative flex justify-center lg:justify-end"
             >
-              <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden glass p-3 border-white/10 group">
+              <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-[3rem] overflow-hidden glass p-3 border-white/5 group shadow-2xl">
                 <img 
                   src="/santhushie.png" 
                   alt={profile.name}
-                  className="w-full h-full object-cover rounded-2xl transition-all duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover rounded-[2.5rem] transition-all duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  <p className="text-white font-bold text-xl mb-1">Santhushie Nallaperuma</p>
-                  <p className="text-purple-400 text-sm font-bold">Software Engineer</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                  <p className="text-white font-black text-2xl mb-1 tracking-tighter">Santhushie Nallaperuma</p>
+                  <p className="text-purple-400 text-sm font-black uppercase tracking-widest">Software Engineer</p>
                 </div>
               </div>
               {/* Decorative Elements */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-600/20 blur-3xl rounded-full -z-10 animate-pulse-slow" />
-              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-600/20 blur-3xl rounded-full -z-10 animate-pulse-slow" />
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-purple-600/10 blur-[120px] rounded-full -z-10 animate-pulse-slow" />
+              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-600/10 blur-[120px] rounded-full -z-10 animate-pulse-slow" />
             </motion.div>
           </div>
         </div>
@@ -157,8 +168,8 @@ const Home: React.FC = () => {
             </Card>
             <Card className="aspect-square flex flex-col justify-center items-center text-center p-8">
               <HiGlobeAlt className="w-12 h-12 text-cyan-500 mb-4" />
-              <div className="text-3xl font-black mb-2">100%</div>
-              <div className="text-sm text-gray-400 uppercase font-bold">Passion</div>
+              <div className="text-3xl font-black mb-2">Open</div>
+              <div className="text-sm text-gray-400 uppercase font-bold">To Opportunities</div>
             </Card>
           </motion.div>
         </div>
@@ -344,9 +355,9 @@ const Home: React.FC = () => {
             <div className="text-5xl font-black text-blue-500 mb-2">100+</div>
             <div className="text-xs text-gray-500 uppercase font-black tracking-widest">Active Students</div>
           </div>
-          <div className="p-8 glass rounded-3xl col-span-2 md:col-span-1">
-            <div className="text-5xl font-black text-pink-500 mb-2">3.4+</div>
-            <div className="text-xs text-gray-500 uppercase font-black tracking-widest">Undergrad GPA</div>
+          <div className="p-8 glass rounded-3xl border-t-2 border-pink-500/20">
+            <div className="text-5xl font-black text-pink-500 mb-2">10+</div>
+            <div className="text-xs text-gray-500 uppercase font-black tracking-widest">Tech Certifications</div>
           </div>
         </div>
       </Section>

@@ -14,5 +14,6 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/santhushie',
   github: 'https://github.com/santhushii',
   fiverr: 'https://www.fiverr.com/santhushie',
-  phone: '+94-762004123'
+  phone: '+94-762004123',
+  isOpenToWork: true
 };

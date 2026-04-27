@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center glass p-2 rounded-full border border-white/10 shadow-2xl gap-1">
+          <div className="hidden lg:flex items-center glass px-2 py-1.5 rounded-full border border-white/5 shadow-2xl gap-0.5">
             {navLinks.map((link) => {
               const isActive = activeSection === link.path.replace('#', '');
               return (
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
                     e.preventDefault();
                     scrollToSection(link.path);
                   }}
-                  className={`relative px-8 py-3 text-[11px] font-black uppercase tracking-widest transition-all duration-500 rounded-full ${
+                  className={`relative px-6 py-2.5 text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 rounded-full ${
                     isActive ? 'text-white' : 'text-gray-400 hover:text-white'
                   }`}
                 >
@@ -105,11 +105,18 @@ const Navbar: React.FC = () => {
             })}
           </div>
 
-          <div className="hidden lg:block ml-4">
+          <div className="hidden lg:flex items-center gap-6">
+            <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-green-500/20 text-green-400 text-[10px] font-black uppercase tracking-widest">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+              </span>
+              Open to Work
+            </div>
             <a 
               href="/Santhushie_Nallaperuma.pdf" 
               download
-              className="btn-premium py-3 px-8 text-xs font-bold uppercase tracking-widest"
+              className="btn-premium py-2.5 px-8 text-[10px] font-bold uppercase tracking-widest shadow-none hover:shadow-purple-500/30"
             >
               Resume
             </a>
